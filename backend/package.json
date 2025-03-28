@@ -1,0 +1,24 @@
+{
+  "name": "lets-talk-about-x-backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GGaunt/lets-talk-about-x.git"
+  },
+  "author": "Joshua Holden / Gareth Gaunt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GGaunt/lets-talk-about-x/issues"
+  },
+  "homepage": "https://github.com/GGaunt/lets-talk-about-x#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
+  }
+}
