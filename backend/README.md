@@ -65,4 +65,4 @@ Run the server
   npm start
 ```
 
-Verify the server is running by visiting [http://localhost:3000/user](http://localhost:3000/user)
+Verify the server is running by visiting [http://localhost:3000/users](http://localhost:3000/users)
