@@ -47,6 +47,8 @@ Run db script (run this any time you want to reset your db)
   mysql -h localhost -u root lets-talk-about-x < ./setup/setupDB.sql
 ```
 
+(optional) get a db client from https://dbeaver.io
+
 ## Setup
 
 Install packages (only first time and when new packages are added)
