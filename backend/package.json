@@ -18,6 +18,7 @@
   "homepage": "https://github.com/GGaunt/lets-talk-about-x#readme",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "mysql2": "^3.14.0"
   }
