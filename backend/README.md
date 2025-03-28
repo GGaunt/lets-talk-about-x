@@ -32,7 +32,7 @@ Connect to the mysql shell as the root user
 Create initial database
 
 ```sql
-  CREATE DATABASE lets-talk-about-x;
+  CREATE DATABASE `lets-talk-about-x`;
 ```
 
 Exit the mysql shell
