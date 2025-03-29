@@ -36,6 +36,16 @@ app.get('/users', (req, res) => {
     });
 });
 
+// Simple route to fetch data
+app.get('/posts', (req, res) => {
+    db.query('SELECT * FROM user_post', (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        res.json(results);
+    });
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
