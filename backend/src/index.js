@@ -2,6 +2,8 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 
+// import { test } from './models/authenticator.js';
+const authenticator = require('./models/authenticator.js');
 const app = express();
 const port = 3000;
 
@@ -45,6 +47,8 @@ app.get('/posts', (req, res) => {
         res.json(results);
     });
 });
+
+authenticator.test();
 
 // Start the server
 app.listen(port, () => {
