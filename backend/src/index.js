@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 // import { test } from './models/authenticator.js';
-const authenticator = require('./models/authenticator.js');
+// const authenticator = require('./models/authenticator.js');
 const app = express();
 const port = 3000;
 
@@ -40,7 +40,7 @@ app.get('/users', (req, res) => {
 
 // Simple route to fetch data
 app.get('/posts', (req, res) => {
-    db.query('SELECT * FROM user_post', (err, results) => {
+    db.query('SELECT user.id user_id, user.username, user_post.id post_id, user_post.content FROM user JOIN user_post ON user.id = user_post.user_id WHERE deleted_at is NULL;', (err, results) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
@@ -48,9 +48,10 @@ app.get('/posts', (req, res) => {
     });
 });
 
-authenticator.test();
+// authenticator.test();
 
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
