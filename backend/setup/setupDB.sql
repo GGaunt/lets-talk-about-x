@@ -31,11 +31,3 @@ INSERT INTO `user_post` (user_id, content, deleted_at)
 VALUES (1, 'This is a post by Josh (cool)', NULL),
        (1, 'This is a post by Josh (mediocre)', now()),
        (2, 'This is a post by Garry (bad)', now());
-
--- SELECT * FROM user;
--- SELECT * FROM user_post;
-
-SELECT u.id AS user_id, u.username, up.content
-
-FROM user AS u
-JOIN user_post AS up ON u.id = up.user_id;
