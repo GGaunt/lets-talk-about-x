@@ -8,8 +8,8 @@
 }
 
 .post-card {
-    background-color: #e0f0fa; /* soft light blue */
-    border: 1px solid #b6dcef;
+    background: linear-gradient(to right, #a1dae6, #58a7d8);
+    border: 1px solid #28556b;
     border-radius: 10px;
     width: 100%;
     max-width: 600px;

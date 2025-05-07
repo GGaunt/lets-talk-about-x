@@ -1,6 +1,7 @@
-// app/components/Nav/nav.tsx
+// app/components/Nav/login.tsx
 import { useState } from "react";
 import "./nav.css";
+import {Login} from "@components/Login/login";
 
 export function Nav() {
     const [showModal, setShowModal] = useState(false);
@@ -16,8 +17,8 @@ export function Nav() {
             {showModal && (
                 <div className="modal-backdrop" onClick={() => setShowModal(false)}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
-                        <h2>Login / Register</h2>
-                        <p>Modal content goes here...</p>
+                        <Login />
+                        <br/>
                         <button onClick={() => setShowModal(false)}>Close</button>
                     </div>
                 </div>
