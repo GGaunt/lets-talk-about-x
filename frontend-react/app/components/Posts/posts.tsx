@@ -1,6 +1,8 @@
+// app/components/Posts/posts.tsx
 import { useEffect, useState } from 'react';
+import './posts.css';
 
-export function Welcome() {
+export function Posts() {
     const [data, setData] = useState<Post[] | null>(null);
     const [error, setError] = useState(null);
 
@@ -13,14 +15,18 @@ export function Welcome() {
             .then((data) => setData(data))
             .catch((err) => setError(err.message));
     }, []);
+
     return (
-        <div>
-                {data?.map(({content, post_id, user_id, username}) => (
-                    <div>
-                        <span>{post_id} {user_id} {username}</span>
-                        <p>{content}</p>
+        <div className="posts-container">
+            {error && <p className="error">🔥 {error}</p>}
+            {data?.map(({ content, post_id, user_id, username }) => (
+                <div key={post_id} className="post-card">
+                    <div className="post-meta">
+                        <span>#{post_id} by <strong>{username}</strong> (User {user_id})</span>
                     </div>
-                ))}
+                    <p className="post-content">{content}</p>
+                </div>
+            ))}
         </div>
     );
 }
